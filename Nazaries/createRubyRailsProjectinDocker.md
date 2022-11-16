@@ -6,7 +6,7 @@
 
 #### 1. Create folder to hold project (in WSL2 side)
 #### 2. Create project in VS
- - **Dockerfile**
+##### Dockerfile
   ``` 
   FROM ruby:3.0
   RUN apt-get update && apt-get install -y nodejs
@@ -23,13 +23,13 @@
   - ``` WORKDIR /rubyExample ```
     Idicates which directory we are going to be using for the project. The same one that we just created in the previous step.
 ---
- - **docker-compose.yml**
+##### docker-compose.yml
 ```
 version: '3.1'
 ```
 Version used. In latests versions is not necessary (I think)
 
-**Database elements:**
+- **Database elements:**
 ```
 db: 
     image: mysql:8.0.31
@@ -48,7 +48,7 @@ db:
 - volumes: which volume are we using/creating and where. This needs to be declared again down in volumes because it is not a ¿fisical place?
 - ports: which port are we using. Inidicate 4306 to not use default one that way different projects would not use the same port.
 
-**App:**
+- **App:**
 ```
 app:
     build: .
@@ -72,7 +72,7 @@ app:
 - ports: which port to use (usng default)
 - depends_on: makes sure to create database before running app.
 
-**Volumes:**
+- **Volumes:**
 ```
 volumes: 
     db: 
