@@ -1,0 +1,11 @@
+### Run the App
+- Clone repo: `git clone git@bitbucket.org:nazaries/decidecrop-mobile-app.git`
+- `npm install`
+- `sudo npm `
+- `sudo npm install -g cordova`
+- Install ionic (if not already installed):
+  - `sudo apt update && sudo apt upgrade`
+  - `sudo npm i -g @ionic/cli`
+  - `ionic -v`
+- Set correctr node.js option: `export NODE_OPTIONS=--openssl-legacy-provider`
+- run project: `ng serve`
